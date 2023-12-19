@@ -4,8 +4,8 @@ import requests, csv, os #py -m pip install requests
 folder_path = os.path.dirname(os.path.abspath(__file__))
 
 #creds
-client_secret = ""
 client_id = ""
+client_secret = ""
 
 def get_access_token(url, client_id, client_secret):
     response = requests.post(
@@ -31,7 +31,7 @@ def make_api_request(api_url, access_token):
         return(f"API request failed with status code {response.status_code}. Response: {response.text}")
 
 def iterate_first_column(access_token):
-    with open(folder_path + '\labels.csv') as csvfile:
+    with open(folder_path + '\conids.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
             print(row[0])
