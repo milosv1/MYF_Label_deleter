@@ -9,7 +9,6 @@ folder_path = os.path.dirname(os.path.abspath(__file__))
 client_id = ""
 client_secret = ""
 
-
 def get_access_token(url, client_id, client_secret):
     response = requests.post(
         url,
@@ -49,20 +48,19 @@ def iterate_first_column(access_token):
 
 
 #This function adds any deleted conids to a new csv file which acts as a small database
-def add_deleted_conids_to_csv(conids_list, access_token):
+def add_deleted_conids_to_csv(conids_list):
     with open(folder_path + '\deleted_conids.csv', 'w') as csvfile:
         writeCSV = csv.writer(csvfile, delimiter=',')
         for conid in conids_list:
             writeCSV.writerow([conid])
 
 
-
 access_token = get_access_token("https://uat.identity.fastway.org/connect/token", client_id, client_secret)
            
 # Call the delete function iterating over the list in the csv
-iterate_first_column(access_token)
+#iterate_first_column(access_token)
 
 conids_list = iterate_first_column(access_token)
 
 #Call function to write deleted conids to new csv file
-add_deleted_conids_to_csv(conids_list, access_token)
+add_deleted_conids_to_csv(conids_list)
