@@ -63,6 +63,29 @@ def add_deleted_conids_to_csv(conids_list):
             writeCSV.writerow([conid])
 
 
+def write_logs(conid, access_token):
+    with open(folder_path + '\logs.txt', 'a') as txt:
+        response = make_api_request(f"https://uat.api.myfastway.com.au/api/consignments/{conid}/reason/3", access_token)
+       
+        print(f"Response for {conid}: {response.status_code} - {response.text}")
+       
+        try:
+            response_json = response.json()
+        except ValueError:
+            response_json = None
+
+        if response.status_code == 200:
+            txt.write(f"Successfully deleted: {conid} with {response.status_code}\n")
+            if response_json:
+                txt.write(f"Response: {response_json}\n")
+        else:
+            txt.write(f"Failed to delete: {conid} with {response.status_code}\n")
+            if response_json:
+                txt.write(f"Error Response: {response_json}\n")
+
+        txt.write('\n')
+
+
 access_token = get_access_token("https://uat.identity.fastway.org/connect/token", client_id, client_secret)
            
 # Call the delete function iterating over the list in the csv
@@ -72,3 +95,7 @@ conids_list = iterate_first_column(access_token)
 
 #Call function to write deleted conids to new csv file
 add_deleted_conids_to_csv(conids_list)
+
+#For each conid in the list, write a log to the logs.txt file
+for conid in conids_list:
+    write_logs(conid, access_token)
