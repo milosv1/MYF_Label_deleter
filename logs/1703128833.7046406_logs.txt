@@ -1,0 +1,12 @@
+Failed to delete: 41107752 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107752)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107862 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107862)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107866 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107866)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107867 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107867)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107868 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107868)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107870 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107870)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41107871 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41107871)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 57805088 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 57805088)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 57806342 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 57806342)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 57806608 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 57806608)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Failed to delete: 41108119 with 400 {'errors': [{'code': 'REC_NF', 'path': None, 'message': 'Unable to find consigment (conId: 41108119)', 'suggestedValues': None, 'logLevel': 0}], 'type': 2}
+Successfully deleted: 41108213 with 200

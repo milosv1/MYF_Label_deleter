@@ -33,9 +33,9 @@ def make_api_request(api_url, access_token):
     #     return(f"API request failed with status code {response.status_code}. Response: {response.text}")
     return response
     
-#Write lines to a dynamic log file
+#Write lines to a dynamic log file within the logs folder
 def write_logs(action_reponse):
-    with open(folder_path +  '\\' + log__file_name, 'a') as txt:
+    with open(folder_path +  '/logs/' + log__file_name, 'a') as txt:
         txt.write(action_reponse)
 
 def iterate_first_column(access_token):
@@ -43,8 +43,6 @@ def iterate_first_column(access_token):
     with open(folder_path + '\conids.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
-            # if row is not empty...
-            #TODO - try and get content of each cell, then save them onto the list and into other csv file.
             if row:       
                 conid = row[0]
                 response = make_api_request(f"https://{myfastway_url}api/consignments/{conid}/reason/3", access_token)
